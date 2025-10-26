@@ -3,8 +3,8 @@
 ![Image](https://www.kubeflow.org/docs/images/dashboard/homepage.png)
 
 <p align="center">
-  <img src="https://www.kubeflow.org/docs/started/images/ai-lifecycle-kubeflow.drawio.svg" alt="Image 1" width="45%" style="margin-right: 10px;"/>
-  <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1657538785980/gBRk6dMYv.png" alt="Image 2" width="45%" style="margin-right: 10px;"/>
+  <img src="https://www.kubeflow.org/docs/started/images/ai-lifecycle-kubeflow.drawio.svg" alt="Image 1" width="57%" style="margin-right: 10px;"/>
+  <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1657538785980/gBRk6dMYv.png" alt="Image 2" width="41%" style="margin-right: 10px;"/>
 </p>
 
 Here’s a simplified explanation:
@@ -210,5 +210,6 @@ gcloud compute firewall-rules delete kubeflow-open
 
 * Creates a **Jupyter Notebook** inside Kubeflow,
 * And sets up a **sample ML pipeline (Kubeflow Pipelines)**
+
 
 ### [Demo link](/01%20Kubeflow/complete%20demo.md)
