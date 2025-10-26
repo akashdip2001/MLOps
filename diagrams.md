@@ -137,7 +137,3 @@ sequenceDiagram
 2. Kubeflow deploys components to Kubernetes.
 3. Model trains, gets deployed, and serves via an API.
 4. Feedback loops keep improving the model.
-
----
-
-Would you like me to now generate a **README.md** version that includes these diagrams, short explanations, and placeholders for your own screenshots (so it looks like a real portfolio project)?
