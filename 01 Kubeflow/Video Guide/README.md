@@ -37,7 +37,7 @@ In short: Kubeflow = “Kubernetes + ML workflows” → ideal for MLOps. If you
 
 ## 2. What you likely saw in the video + GitHub repo and what to *do*
 
-You mentioned the video had them install Minikube inside Google Cloud, use Docker commands, then run a Jupyter notebook on a server — and you provided the GitHub repo: [github.com/akashdip2001/MLOps/01 Kubeflow](https://github.com/akashdip2001/MLOps/tree/main/01%20Kubeflow) ([GitHub][6])
+The [`video`](https://youtu.be/bywO8tvetkM) had them install Minikube inside Google Cloud, use Docker commands, then run a Jupyter notebook on a server — and you provided the GitHub repo: [github.com/akashdip2001/MLOps/01 Kubeflow](https://github.com/akashdip2001/MLOps/tree/main/01%20Kubeflow) ([GitHub][6])
 Here’s how I’d interpret the flow, and what you might *try to reproduce*. I’ll also point out what to watch for.
 
 ### 🔄 Likely workflow steps in that video / repo
@@ -101,11 +101,10 @@ If you’re preparing for cloud + AI roles (like that Google Cloud Engineer – 
 
 ---
 
-If you like, **I can walk you through the exact scripts in your GitHub repo** (the install scripts etc) and provide annotated comments explaining what each command does, and we can **customise them to your environment** (your Google Cloud account or local machine). Would you like me to do that?
-
 [1]: https://www.kubeflow.org/?utm_source=chatgpt.com "Kubeflow"
 [2]: https://developers.redhat.com/articles/2024/01/25/implement-mlops-kubeflow-pipelines?utm_source=chatgpt.com "Implement MLOps with Kubeflow Pipelines"
 [3]: https://www.kubeflow.org/docs/started/architecture/?utm_source=chatgpt.com "Architecture"
 [4]: https://cloud.google.com/discover/what-is-kubeflow?utm_source=chatgpt.com "What is Kubeflow and how can it be used?"
 [5]: https://medium.com/%40sumit.kaul.87/introduction-to-kubeflow-mlops-3fbff0eb1ae6?utm_source=chatgpt.com "Introduction to Kubeflow: MLOps"
+
 [6]: https://github.com/akashdip2001/MLOps/tree/main/01%20Kubeflow "MLOps/01 Kubeflow at main · akashdip2001/MLOps · GitHub"
