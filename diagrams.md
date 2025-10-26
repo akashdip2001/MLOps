@@ -1,4 +1,4 @@
-## 🧠 **Diagram 1: End-to-End MLOps Lifecycle Overview**
+## 🧠 Diagram 1: End-to-End MLOps Lifecycle Overview
 
 ```mermaid
 flowchart LR
@@ -9,43 +9,36 @@ flowchart LR
     E --> F[📊 Monitoring & Feedback]
     F --> A
 
-    subgraph "💡 Continuous Improvement"
+    subgraph "Continuous Improvement"
     A --> B --> C --> D --> E --> F --> A
     end
-
-    style A fill:#d1e7ff,stroke:#0366d6,stroke-width:2px
-    style B fill:#c3f0ca,stroke:#22863a,stroke-width:2px
-    style C fill:#ffe082,stroke:#b58900,stroke-width:2px
-    style D fill:#fdd0a2,stroke:#d2691e,stroke-width:2px
-    style E fill:#b3e5fc,stroke:#0277bd,stroke-width:2px
-    style F fill:#e1bee7,stroke:#6a1b9a,stroke-width:2px
 ```
 
-**🧩 Explanation**
+### 🧩 Explanation
 
-* It’s a *continuous loop*, similar to DevOps (CI/CD), but tailored for ML models.
+* It’s a **continuous loop**, similar to DevOps (CI/CD), but tailored for ML models.
 * Each stage can be automated through **pipelines**, managed in platforms like **Kubeflow**, **Vertex AI**, or **MLflow**.
 
 ---
 
-## ⚙️ **Diagram 2: MLOps Tools & Platforms Comparison**
+## ⚙️ Diagram 2: MLOps Tools & Platforms Comparison
 
 ```mermaid
-graph TB
+graph LR
     subgraph DevOps
-    D1[Source Control (GitHub, GitLab)]
-    D2[CI/CD (Jenkins, GitHub Actions)]
-    D3[Containerization (Docker)]
-    D4[Orchestration (Kubernetes)]
-    D5[Monitoring (Prometheus, Grafana)]
+    D1[Source Control - GitHub, GitLab]
+    D2[CI/CD - Jenkins, GitHub Actions]
+    D3[Containerization - Docker]
+    D4[Orchestration - Kubernetes]
+    D5[Monitoring - Prometheus, Grafana]
     end
 
-    subgraph MLOps Platform
-    M1[Data Ops (Dataflow, Spark, Pandas)]
-    M2[Model Training (TensorFlow, PyTorch)]
-    M3[Pipelines (Kubeflow, MLflow, Airflow)]
-    M4[Model Serving (KServe, TensorFlow Serving)]
-    M5[Monitoring (Prometheus + Model Drift Tools)]
+    subgraph MLOps_Platform[MLOps Platform]
+    M1[Data Ops - Dataflow, Spark, Pandas]
+    M2[Model Training - TensorFlow, PyTorch]
+    M3[Pipelines - Kubeflow, MLflow, Airflow]
+    M4[Model Serving - KServe, TensorFlow Serving]
+    M5[Monitoring - Prometheus + Model Drift Tools]
     end
 
     D4 --> M3
@@ -53,25 +46,25 @@ graph TB
     M4 --> M5
 ```
 
-**🧠 Key Takeaway**
+### 🧠 Key Takeaway
 
 > In DevOps, you combine many individual tools.
-> In MLOps, a **single platform (like Kubeflow)** integrates all these tools — pipelines, serving, monitoring — on top of Kubernetes.
+> In MLOps, a single platform (like **Kubeflow**) integrates all these tools — pipelines, serving, monitoring — on top of Kubernetes.
 
 ---
 
-## 🧩 **Diagram 3: Kubeflow Architecture (Simplified)**
+## 🧩 Diagram 3: Kubeflow Architecture (Simplified)
 
 ```mermaid
 graph TB
-    subgraph Kubeflow Platform
+    subgraph Kubeflow_Platform[Kubeflow Platform]
     A1[🎓 Notebook Server] --> A2[🧬 Pipeline Components]
-    A2 --> A3[📦 Training Jobs (TFJob, PyTorchJob)]
-    A3 --> A4[🚀 Model Serving (KServe)]
+    A2 --> A3[📦 Training Jobs - TFJob, PyTorchJob]
+    A3 --> A4[🚀 Model Serving - KServe]
     A4 --> A5[📈 Monitoring & Feedback]
     end
 
-    subgraph Underlying Infra
+    subgraph Underlying_Infrastructure[Underlying Infrastructure]
     B1[(Kubernetes Cluster)]
     B2[(Docker Containers)]
     B3[(Storage: GCS, S3, PVC)]
@@ -82,15 +75,15 @@ graph TB
     B1 --> B3
 ```
 
-**✨ Highlights:**
+### ✨ Highlights
 
-* Each **step** (data prep → training → deploy → monitor) runs as a **containerized component**.
+* Each step (data prep → training → deploy → monitor) runs as a **containerized component**.
 * Kubeflow uses **Kubernetes** as the engine and **Docker** as the packaging format.
 * It’s **scalable, reproducible, and automatable**.
 
 ---
 
-## 🔄 **Diagram 4: Kubeflow Pipeline Flow**
+## 🔄 Diagram 4: Kubeflow Pipeline Flow
 
 ```mermaid
 flowchart TD
@@ -103,18 +96,15 @@ flowchart TD
 
     P1 --> P2 --> P3 --> P4
 
-    subgraph Kubeflow DSL
+    subgraph Kubeflow_DSL[Kubeflow DSL]
     C1["Python Script (.py)"] --> C2["Compile with DSL Compiler"]
     C2 --> C3["Pipeline YAML (.yaml)"]
     end
 
     C3 --> Pipeline
-
-    style Pipeline fill:#e0f7fa,stroke:#0288d1,stroke-width:2px
-    style C3 fill:#ffe082,stroke:#f57c00,stroke-width:2px
 ```
 
-**🧠 Explanation:**
+### 🧠 Explanation
 
 * Developers write **Python-based pipeline scripts** using the **Kubeflow DSL**.
 * These are compiled into **YAML manifests**, which Kubeflow uses to orchestrate containers.
@@ -122,7 +112,7 @@ flowchart TD
 
 ---
 
-## 🧱 **Diagram 5: Real-World Deployment Flow (Example)**
+## 🧱 Diagram 5: Real-World Deployment Flow (Example)
 
 ```mermaid
 sequenceDiagram
@@ -141,9 +131,13 @@ sequenceDiagram
     KF-->>Dev: Send metrics & drift reports
 ```
 
-**🚀 Flow Summary**
+### 🚀 Flow Summary
 
 1. You push a pipeline (`.py` + `.yaml`) into Kubeflow.
 2. Kubeflow deploys components to Kubernetes.
 3. Model trains, gets deployed, and serves via an API.
 4. Feedback loops keep improving the model.
+
+---
+
+Would you like me to now generate a **README.md** version that includes these diagrams, short explanations, and placeholders for your own screenshots (so it looks like a real portfolio project)?
